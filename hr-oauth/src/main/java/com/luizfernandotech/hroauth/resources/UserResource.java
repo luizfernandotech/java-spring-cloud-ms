@@ -19,6 +19,7 @@ public class UserResource {
 
     @GetMapping(value = "/search")
     public User findByEmail(@RequestParam String email) {
+
         try {
             return service.findByEmail(email);
         } catch (IllegalArgumentException e) {
